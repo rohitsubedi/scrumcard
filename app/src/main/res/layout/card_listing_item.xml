@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="#830007"
+            android:textColor="@color/colorPrimary"
             android:textSize="40dp"
             android:textStyle="bold" />
     </RelativeLayout>
