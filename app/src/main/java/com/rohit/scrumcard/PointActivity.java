@@ -1,5 +1,6 @@
 package com.rohit.scrumcard;
 
+import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Intent;
@@ -17,6 +18,7 @@ public class PointActivity extends AppCompatActivity {
     AnimatorSet mSetRightOut;
     AnimatorSet mSetLeftIn;
     Boolean mIsBackVisible = true;
+    Boolean canAnimate = true;
 
     /**
      * Set Camera Distance to support flip on all screen size
@@ -32,6 +34,10 @@ public class PointActivity extends AppCompatActivity {
      * Flip card logic to flip a card
      */
     private void flipCard() {
+        if (!canAnimate) return;
+
+        canAnimate = false;
+
         if (!mIsBackVisible) {
             mSetRightOut.setTarget(pointShow);
             mSetLeftIn.setTarget(pointHide);
@@ -58,6 +64,30 @@ public class PointActivity extends AppCompatActivity {
         displayValue = (TextView) findViewById(R.id.display_value);
         mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.out_animation);
         mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
+
+
+        mSetLeftIn.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                canAnimate = true;
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+
 
         displayValue.setText(value);
         changeCameraDistance();
