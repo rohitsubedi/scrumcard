@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:horizontalSpacing="10dp"
+        android:horizontalSpacing="40dp"
         android:numColumns="3"
-        android:verticalSpacing="10dp"></GridView>
+        android:verticalSpacing="5dp"></GridView>
 </RelativeLayout>

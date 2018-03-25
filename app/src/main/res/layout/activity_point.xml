@@ -12,8 +12,36 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:id="@+id/point_layout_show">
+        <ImageView
+            android:id="@+id/card_opened"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/blank" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/display_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="100dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/point_layout_hide">
         <ImageView
             android:id="@+id/card_closed"
             android:layout_width="wrap_content"
@@ -22,15 +50,29 @@
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
             android:src="@drawable/card" />
-
-        <TextView
-            android:id="@+id/display_value"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textColor="#FFFFFF"
-            android:textSize="100dp"
-            android:textStyle="bold" />
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/planning_poker"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:text="Planning Poker"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap to show the point"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/planning_poker"/>
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

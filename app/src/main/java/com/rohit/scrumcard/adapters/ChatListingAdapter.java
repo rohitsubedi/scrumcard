@@ -21,12 +21,12 @@ import java.util.ArrayList;
  * Created by developer on 25/03/18.
  */
 
-public class ChatListingAdapter extends ArrayAdapter<Integer> {
+public class ChatListingAdapter extends ArrayAdapter<String> {
     protected Context context;
     protected int resource;
-    protected ArrayList<Integer> values;
+    protected ArrayList<String> values;
 
-    public ChatListingAdapter(Context context, int resource, ArrayList<Integer> values) {
+    public ChatListingAdapter(Context context, int resource, ArrayList<String> values) {
         super(context, resource, values);
 
         this.context = context;
@@ -41,7 +41,7 @@ public class ChatListingAdapter extends ArrayAdapter<Integer> {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(this.resource, parent, false);
-        final int value = this.values.get(position);
+        final String value = this.values.get(position);
         TextView text = (TextView) rowView.findViewById(R.id.scrum_value);
         RelativeLayout layout = (RelativeLayout) rowView.findViewById(R.id.scrum_relative_layout);
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<Integer> items;
+    ArrayList<String> items;
     ChatListingAdapter adapter;
     GridView scrumView;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         scrumView = (GridView) findViewById(R.id.scrum_view);
-        items = new ArrayList<>(Arrays.asList(1, 2, 3, 5, 8, 13, 20, 40, 100));
+        items = new ArrayList<>(Arrays.asList("0", "1/2", "1", "2", "3", "5", "8", "13", "20", "40", "100", "?"));
         adapter = new ChatListingAdapter(this, R.layout.card_listing_item, items);
 
         scrumView.setAdapter(adapter);
@@ -34,7 +34,14 @@ public class MainActivity extends AppCompatActivity {
      * @param intent
      */
     public void startNewActivity(Intent intent) {
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
