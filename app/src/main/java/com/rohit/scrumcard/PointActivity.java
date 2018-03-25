@@ -19,6 +19,7 @@ public class PointActivity extends AppCompatActivity {
     AnimatorSet mSetLeftIn;
     Boolean mIsBackVisible = true;
     Boolean canAnimate = true;
+    TextView hint;
 
     /**
      * Set Camera Distance to support flip on all screen size
@@ -64,8 +65,23 @@ public class PointActivity extends AppCompatActivity {
         displayValue = (TextView) findViewById(R.id.display_value);
         mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.out_animation);
         mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
+        hint = (TextView) findViewById(R.id.tap_to_show_point);
 
+        displayValue.setText(value);
+        changeCameraDistance();
 
+        pointHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flipCard();
+            }
+        });
+        pointShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flipCard();
+            }
+        });
         mSetLeftIn.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -74,6 +90,7 @@ public class PointActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
+                hint.setVisibility(TextView.INVISIBLE);
                 canAnimate = true;
             }
 
@@ -85,24 +102,6 @@ public class PointActivity extends AppCompatActivity {
             @Override
             public void onAnimationRepeat(Animator animation) {
 
-            }
-        });
-
-
-        displayValue.setText(value);
-        changeCameraDistance();
-
-        pointHide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard();
-            }
-        });
-
-        pointShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard();
             }
         });
     }

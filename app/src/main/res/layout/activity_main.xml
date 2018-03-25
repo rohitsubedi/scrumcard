@@ -19,4 +19,13 @@
         android:horizontalSpacing="40dp"
         android:numColumns="3"
         android:verticalSpacing="5dp"></GridView>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Powered by @rohitsubedi"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:textAlignment="center"
+        android:textColor="#830007"
+        />
 </RelativeLayout>

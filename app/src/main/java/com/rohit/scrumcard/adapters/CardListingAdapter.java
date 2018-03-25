@@ -20,12 +20,12 @@ import java.util.ArrayList;
  * Created by developer on 25/03/18.
  */
 
-public class ChatListingAdapter extends ArrayAdapter<String> {
+public class CardListingAdapter extends ArrayAdapter<String> {
     protected Context context;
     protected int resource;
     protected ArrayList<String> values;
 
-    public ChatListingAdapter(Context context, int resource, ArrayList<String> values) {
+    public CardListingAdapter(Context context, int resource, ArrayList<String> values) {
         super(context, resource, values);
 
         this.context = context;

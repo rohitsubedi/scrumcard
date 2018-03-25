@@ -7,8 +7,7 @@
     <RelativeLayout
         android:id="@+id/scrum_relative_layout"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#FFFFFF">
+        android:layout_height="fill_parent">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="#000000"
+            android:textColor="#830007"
             android:textSize="40dp"
             android:textStyle="bold" />
     </RelativeLayout>

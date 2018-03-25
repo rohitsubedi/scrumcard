@@ -5,14 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 
-import com.rohit.scrumcard.adapters.ChatListingAdapter;
+import com.rohit.scrumcard.adapters.CardListingAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> items;
-    ChatListingAdapter adapter;
+    CardListingAdapter adapter;
     GridView scrumView;
 
     @Override
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         scrumView = (GridView) findViewById(R.id.scrum_view);
         items = new ArrayList<>(Arrays.asList("0", "1/2", "1", "2", "3", "5", "8", "13", "20", "40", "100", "?"));
-        adapter = new ChatListingAdapter(this, R.layout.card_listing_item, items);
+        adapter = new CardListingAdapter(this, R.layout.card_listing_item, items);
 
         scrumView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
