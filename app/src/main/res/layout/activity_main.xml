@@ -11,13 +11,12 @@
     tools:context="com.rohit.scrumcard.MainActivity">
 
     <GridView
+        android:id="@+id/scrum_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numColumns="3"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:horizontalSpacing="10dp"
-        android:verticalSpacing="10dp"
-        android:id="@+id/scrum_view"
-        ></GridView>
+        android:numColumns="3"
+        android:verticalSpacing="10dp"></GridView>
 </RelativeLayout>

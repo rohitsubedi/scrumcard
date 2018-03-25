@@ -3,7 +3,6 @@ package com.rohit.scrumcard;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.GridView;
 
 import com.rohit.scrumcard.adapters.ChatListingAdapter;
@@ -34,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param intent
      */
-    public void startNewActivity(Intent intent)
-    {
+    public void startNewActivity(Intent intent) {
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

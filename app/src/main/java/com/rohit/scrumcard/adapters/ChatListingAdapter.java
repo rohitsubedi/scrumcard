@@ -2,7 +2,6 @@ package com.rohit.scrumcard.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,9 +29,9 @@ public class ChatListingAdapter extends ArrayAdapter<Integer> {
     public ChatListingAdapter(Context context, int resource, ArrayList<Integer> values) {
         super(context, resource, values);
 
-        this.context  = context;
+        this.context = context;
         this.resource = resource;
-        this.values   = values;
+        this.values = values;
     }
 
     @NonNull

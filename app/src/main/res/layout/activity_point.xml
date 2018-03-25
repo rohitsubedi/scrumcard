@@ -9,29 +9,28 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.rohit.scrumcard.PointActivity">
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <ImageView
+            android:id="@+id/card_closed"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:adjustViewBounds="true"
-            android:id="@+id/card_closed"
-            android:src="@drawable/card"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            />
+            android:adjustViewBounds="true"
+            android:src="@drawable/card" />
 
         <TextView
+            android:id="@+id/display_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/display_value"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:textColor="#FFFFFF"
             android:textSize="100dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </RelativeLayout>
 </RelativeLayout>
