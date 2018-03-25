@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Planning Poker</string>
+    <string name="scrum">scrum</string>
+    <string name="planning_poker">Planning Poker</string>
+    <string name="tap_hint">Tap to show the point</string>
 </resources>

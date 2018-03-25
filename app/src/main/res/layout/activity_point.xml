@@ -68,13 +68,14 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="70dp"
-                android:text="SCRUM"/>
+                android:textAllCaps="true"
+                android:text="@string/scrum"/>
 
             <TextView
                 android:id="@+id/planning_poker"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Planning Poker"
+                android:text="@string/planning_poker"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:layout_below="@+id/scrum_title"
@@ -86,20 +87,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/planning_poker"
                 android:layout_marginTop="10dp"
-                android:text="Tap to show the point"
+                android:text="@string/tap_hint"
                 android:id="@+id/tap_to_show_point"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Powered by @rohitsubedi"
-        android:layout_alignParentBottom="true"
-        android:gravity="bottom"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        />
+    <include layout="@layout/copyright_layout"></include>
 </RelativeLayout>
