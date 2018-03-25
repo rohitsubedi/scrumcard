@@ -19,6 +19,9 @@ public class PointActivity extends AppCompatActivity {
     AnimatorSet mSetLeftIn;
     Boolean mIsBackVisible = true;
 
+    /**
+     * Set Camera Distance to support flip on all screen size
+     */
     private void changeCameraDistance() {
         int distance = 8000;
         float scale = getResources().getDisplayMetrics().density * distance;
@@ -26,6 +29,9 @@ public class PointActivity extends AppCompatActivity {
         pointHide.setCameraDistance(scale);
     }
 
+    /**
+     * Flip card logic to flip a card
+     */
     private void flipCard()
     {
         if (!mIsBackVisible) {
@@ -56,6 +62,7 @@ public class PointActivity extends AppCompatActivity {
         mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
 
         displayValue.setText(value);
+        changeCameraDistance();
 
         pointHide.setOnClickListener(new View.OnClickListener() {
             @Override
