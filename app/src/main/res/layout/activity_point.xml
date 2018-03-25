@@ -35,7 +35,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="#830007"
+                android:textColor="@color/colorPrimary"
                 android:textSize="150dp"
                 android:textStyle="bold" />
         </RelativeLayout>
