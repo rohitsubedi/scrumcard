@@ -52,7 +52,6 @@ public class CardListingAdapter extends ArrayAdapter<String> {
                 Intent intent = new Intent(context, PointActivity.class);
 
                 intent.putExtra("CARD_VALUE", value);
-                context.startActivity(intent);
                 ((MainActivity) context).startNewActivity(intent);
             }
         });
