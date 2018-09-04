@@ -10,4 +10,6 @@ Very easy and light app for Andriod which can be used during planning of tasks d
 </p>
 
 ## Video
-[![Planning Poker](https://img.youtube.com/vi/bRJj4MwXBbg/0.jpg)](https://www.youtube.com/watch?v=bRJj4MwXBbg)
+<p>
+  <img src="https://j.gifs.com/YvGWX0.gif" />
+</p>
